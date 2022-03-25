@@ -1,27 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
 import './components/Test';
-import TestComponent from './components/Test';
+import TaskList from './components/TaskList';
+
 
 function App() {
+  const TODO = [
+    {id: '1', title: 'Title 1', completed: false, description: 'description', steps: ['step1','step2','step3']},
+    {id: '2', title: 'Title 2', completed: false, description: 'description 2', steps: ['step1','step2','step3','step4']},
+    {id: '3', title: 'Title 3', completed: false, description: 'description 3', steps: ['step1','step2']}
+  ]
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <TestComponent />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TaskList tasks={TODO}/>
+    </>
   );
 }
 
