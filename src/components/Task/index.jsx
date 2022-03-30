@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Step from '../Step'
 import './task.css'
 
 const Task = ({task, todoData, setTodoData}) =>{
@@ -24,8 +25,8 @@ const Task = ({task, todoData, setTodoData}) =>{
                 <>
                     steps-list
                     <ul>
-                        {task.steps.map((step,index)=>(
-                            <li key={step.id}>{step.name}</li>
+                        {task.steps.map((step)=>(
+                            <Step key={step.id} step={step} todoData={todoData} setTodoData={setTodoData}/>
                         ))}
                     </ul>                    
                 </>
