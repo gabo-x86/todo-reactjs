@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import './task.css'
 
-const Task = ({task}) =>{
+const Task = ({task, todoData, setTodoData}) =>{
     const [showDetail, setShowDetail] = useState(false);
 
     const showTaskDetail = () =>{
-        setShowDetail(!showDetail)
+        setShowDetail(!showDetail);
     }
-    const setCheckBoxValue = (id) =>{
-        console.log(`Checkbox-value ${id} has changed :)`);
+
+    const onCheckTask  = () =>{
+        const newTodoData = todoData.map(e => e.id===task.id ? {...task, completed:!task.completed} : e)
+        setTodoData(newTodoData);
     }
+
     return(
         <>        
             <div className='task'>
                 <span className='task-icon' onClick={showTaskDetail}>v</span>
-                <span className='task-text'>{task.title}</span>
-                <input type='checkbox' checked={task.completed} onChange={()=>setCheckBoxValue(task.id)}></input>
+                <span className='task-text'>{task.name}</span>
+                <input type='checkbox' checked={task.completed} onChange={onCheckTask}></input>
             </div>
             {showDetail && (
                 <>
                     steps-list
                     <ul>
                         {task.steps.map((step,index)=>(
-                            <li key={`task${task.id}_step${index}`}>{step}</li>
+                            <li key={step.id}>{step.name}</li>
                         ))}
                     </ul>                    
                 </>

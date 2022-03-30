@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Task from "../Task";
+import { INITIAL_DATA } from "../../data";
 import './taskList.css';
 
-const TaskList = ({tasks}) =>{
+const TaskList = () =>{
+    const [todoData, setTodoData] = useState(INITIAL_DATA);
+
     return(
         <>
-            {tasks.map((element)=>(
-                <Task key={element.id} task={element} />
+            {todoData.map((element)=>(
+                <Task key={element.id} task={element} setTodoData={setTodoData} todoData={todoData}/>
             ))}
         </>
     )
