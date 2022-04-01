@@ -1,21 +1,10 @@
 import React from 'react';
 import './step.css';
 
-const Step = ({step, todoData, setTodoData}) =>{
-
-    const onCheckStep = () =>{
-        const newTodoData = todoData.map(e => {
-            const newStep = e.steps.map(s => (
-                s.id===step.id ? {...step, completed: !step.completed} : s)
-            );
-            return {...e, steps: newStep}
-        })
-        setTodoData(newTodoData);
-    }
-
+const Step = ({step, onCheckStep}) =>{
     return(<>
         <span>{step.name}</span>
-        <input type='checkbox' checked={step.completed} onChange={onCheckStep} /> 
+        <input type='checkbox' checked={step.completed} onChange={() => onCheckStep(step.id)} /> 
         <br/>
     </>)
 }
