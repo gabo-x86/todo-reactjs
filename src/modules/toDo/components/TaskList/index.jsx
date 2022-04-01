@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Task from "../Task";
-import Button from "../Button"
-import { INITIAL_DATA } from "../../data";
+import Button from "../../../../components/Button"
+import { INITIAL_DATA } from "../../../../data";
 import './taskList.css';
 
 const TaskList = () =>{

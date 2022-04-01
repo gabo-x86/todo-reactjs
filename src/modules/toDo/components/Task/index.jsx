@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Arrow from "../../../../components/Arrow";
 import Step from '../Step'
 import './task.css'
 
@@ -7,6 +8,7 @@ const Task = ({task, todoData, setTodoData}) =>{
 
     const showTaskDetail = () =>{
         setShowDetail(!showDetail);
+
     }
 
     const onCheckTask  = () =>{
@@ -17,7 +19,7 @@ const Task = ({task, todoData, setTodoData}) =>{
     return(
         <>        
             <div className='task'>
-                <span className='task-icon' onClick={showTaskDetail}>v</span>
+                <Arrow direction={showDetail?'arrow--up':'arrow--down'} onClickHandler={showTaskDetail}/>
                 <span className='task-text'>{task.name}</span>
                 <input type='checkbox' checked={task.completed} onChange={onCheckTask}></input>
             </div>

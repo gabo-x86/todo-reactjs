@@ -4,10 +4,13 @@ import './step.css';
 const Step = ({step, todoData, setTodoData}) =>{
 
     const onCheckStep = () =>{
-        const newStep = todoData.map(e => {
-            return e.steps.map(s => s.id===step.id ? {...step, completed: !step.completed} : s);
-        }
-        setTodoData(newStep);
+        const newTodoData = todoData.map(e => {
+            const newStep = e.steps.map(s => (
+                s.id===step.id ? {...step, completed: !step.completed} : s)
+            );
+            return {...e, steps: newStep}
+        })
+        setTodoData(newTodoData);
     }
 
     return(<>

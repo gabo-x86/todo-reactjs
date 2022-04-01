@@ -1,7 +1,7 @@
 
 import './App.css';
 import './components/Test';
-import TaskList from './components/TaskList';
+import TaskList from './modules/toDo/components/TaskList';
 
 
 function App() {

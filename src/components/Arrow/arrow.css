@@ -1,0 +1,25 @@
+/* CSS Document */
+
+.arrow-icon{
+    width: 8px;
+    height: 8px;
+    margin: 8px;
+    border-top: solid 4px;
+    border-right: solid 4px;
+    pointer-events: painted;
+    cursor: pointer;
+}
+
+.arrow--up{
+    transform: rotate(315deg);
+}
+.arrow--right{
+    transform: rotate(45deg);
+}
+.arrow--down{
+    transform: rotate(135deg);
+}
+.arrow--left{
+    transform: rotate(225deg);
+}
+
