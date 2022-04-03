@@ -1,0 +1,18 @@
+/* CSS Document */
+
+.addTask-container{
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+}
+
+.addTask-container__task-input{
+    margin: 1em 1.5em 0em 0em;
+}
+
+.addTask-container__description-input{
+    margin: 1em 1.5em 0em 0em;
+}
+
+.addTask-container__buttons{
+    margin: 1em 1.5em 0em 0em;
+}
