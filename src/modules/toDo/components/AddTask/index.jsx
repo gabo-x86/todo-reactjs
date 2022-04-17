@@ -53,8 +53,8 @@ const AddTask = ({taskLength, onAddTask, onVisibleModal}) =>{
             </div>
 
             <div className="addTask-container__buttons">
-                <Button textName={'Añadir Tarea'} onClickHandler={addTask} />
-                <Button textName={'Cancelar'} onClickHandler={onVisibleModal} />
+                <Button buttonType={'ok'} textName={'Añadir Tarea'} onClickHandler={addTask} />
+                <Button buttonType={'cancel'} textName={'Cancelar'} onClickHandler={onVisibleModal} />
             </div>
             
             

@@ -2,11 +2,11 @@ import React from 'react';
 
 import './button.css';
 
-const Button = ({textName, onClickHandler}) =>{
+const Button = ({buttonType, textName, onClickHandler}) =>{
 
     return(
         <>
-        <button onClick={onClickHandler}>{textName}</button>
+        <button  className={`button-${buttonType}`} onClick={onClickHandler}>{textName}</button>
         </>
     )
 }

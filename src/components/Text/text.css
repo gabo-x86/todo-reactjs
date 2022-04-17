@@ -3,7 +3,8 @@
 @import '../../nord.css';
 
 .text-title{
-
+    color: var(--nord4);
+    font-family: Arial;
 }
 
 .text-paragraph{
@@ -12,4 +13,8 @@
 
 .text-button{
 
+}
+
+.text-paragraph--labeled{
+    text-decoration: line-through;
 }

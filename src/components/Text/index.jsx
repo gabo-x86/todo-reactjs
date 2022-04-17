@@ -1,4 +1,5 @@
 import React from "react";
+import './text.css';
 
 const Text = ({children, textType}) =>{
     switch (textType){
@@ -7,7 +8,7 @@ const Text = ({children, textType}) =>{
         break;
 
         case 'paragraph':
-            return(<p className='text-paragraph'>{children}</p>)
+            return(<p className='text-paragraph--labeled'>{children}</p>)
         break;
 
         case 'buttonLabel':
