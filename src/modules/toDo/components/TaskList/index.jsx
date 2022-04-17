@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Task from "../Task";
-import Button from "../../../../components/Button"
-import InputText from "../../../../components/InputText";
 import Modal from "../../../../components/Modal"
 import AddTask from "../AddTask";
+import Text from "../../../../components/Text";
 import { INITIAL_DATA } from "../../../../data";
 import './taskList.css';
 
@@ -37,6 +36,7 @@ const TaskList = () =>{
 
     return(
         <>
+            <Text textType='title'>To Do List Project</Text>
             {todoData.map((element)=>(
                 <Task key={element.id} task={element} onCheckTask={onCheckTask} onCheckStep={onCheckStep} />
             ))}

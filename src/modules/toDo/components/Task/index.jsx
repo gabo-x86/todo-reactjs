@@ -15,9 +15,8 @@ const Task = ({task, onCheckTask, onCheckStep}) =>{
         <>        
             <div className='task'>
                 <Arrow direction={showDetail?'arrow--up':'arrow--down'} onClickHandler={showTaskDetail}/>
-                {/* <span className='task-text'>{task.name}</span> */}
                 <Text textType='paragraph'>{task.name}</Text>
-                <input type='checkbox' checked={task.completed} onChange={()=>onCheckTask(task.id)}></input>
+                <input className='task-checkbox' type='checkbox' checked={task.completed} onChange={()=>onCheckTask(task.id)}></input>
             </div>
             {showDetail && (
                 <>

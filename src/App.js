@@ -6,11 +6,13 @@ import TaskList from './modules/toDo/components/TaskList';
 
 function App() {
   
-  return (
-    <>
+  return (<>
+    <div className='main-background'></div>
+
+    <div className='task-list'>
       <TaskList />
-    </>
-  );
+    </div>
+  </>);
 }
 
 export default App;
